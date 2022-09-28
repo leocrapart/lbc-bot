@@ -25,6 +25,10 @@ save -> delete -> recreate
 leboncoin api project
 https://www.growthhacking.fr/t/solution-pour-scraper-leboncoin-via-une-api/21170/4
 
+scrapper apis
+https://datashake.com/
+https://lobstr.io/ (leboncoin)
+
 
 # lbc-bot
 
