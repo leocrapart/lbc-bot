@@ -30,6 +30,17 @@ https://datashake.com/
 https://lobstr.io/ (leboncoin)
 
 
+
+...
+browser automation studio
+https://bablosoft.com/shop/BrowserAutomationStudio
+https://www.youtube.com/watch?v=bHtxKGRnuRQ
+BAS
+https://devenirentrepreneurweb.systeme.io/dew-automatisation?sc=637143425e0e9e3d59b770ba530d36c2bd869436
+autre outil
+https://youtu.be/G4DrM_pL1F0
+
+
 # lbc-bot
 
 FIXME: description
