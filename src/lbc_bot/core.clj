@@ -10,7 +10,7 @@
   (println "Hello, World!")
   (deposer-10-annonces-pro))
 
-(-main)
+; (-main)
 
 (defn sleep [ms]
   (Thread/sleep ms))
