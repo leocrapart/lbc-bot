@@ -7,8 +7,10 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (println "Hello, World!")
+  (deposer-10-annonces-pro))
 
+(-main)
 
 (defn sleep [ms]
   (Thread/sleep ms))
@@ -227,9 +229,9 @@
 ; (deposer-annonce-pro (annonce 9))
 
 
-(defn deposer-10-annoces-pro []
+(defn deposer-10-annonces-pro []
   (deposer-annonce-pro (annonce 1))
-  (sleep 330000)
+  (sleep 10000)
   (deposer-annonce-pro (annonce 2))
   (sleep 330000)
   (deposer-annonce-pro (annonce 3))
@@ -250,25 +252,48 @@
 
 
 ;; start stop
-(defn function-to-run
-  []
+(defn f-deposer-annonce-pro [n]
   (while true
     (if-not (Thread/interrupted)
       ; ... do your work
-      (deposer-annonce-pro (annonce 9))
+      (deposer-annonce-pro (annonce n))
       ; ... ------------
       (throw (InterruptedException. "Function interrupted...")))))
 
-(def t (Thread. (fn []
-                  (try
-                    (while true
-                      (function-to-run))
-                    (catch InterruptedException e
-                      (println (.getMessage e)))))))
+(defn t-annonce [n] 
+  (Thread. (fn []
+            (try
+              (while true
+                (f-deposer-annonce-pro n))
+              (catch InterruptedException e
+                (println (.getMessage e)))))))
 
-(.start t)
-(.interrupt t)
+
+(defn f-deposer-10-annonces-pro []
+  (while true
+    (if-not (Thread/interrupted)
+      ; ... do your work
+      (deposer-10-annonces-pro)
+      ; ... ------------
+      (throw (InterruptedException. "Function interrupted...")))))
+
+(def t-10-annonces
+  (Thread. (fn []
+            (try
+              (while true
+                (f-deposer-10-annonces-pro))
+              (catch InterruptedException e
+                (println (.getMessage e)))))))
+
+(def t-annonce-1
+  (t-annonce 1))
+
+; (.start t-annonce-1)
+; (.interrupt t-annonce-1)
+
+(.start t-10-annonces)
+(.interrupt t-10-annonces)
 
 ;; excel => v
 ;; 10 => v
-;; stop the bot 
+;; stop the bot => v
