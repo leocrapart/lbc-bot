@@ -1,3 +1,13 @@
+# next steps
+run on server
+
+navigate by inspection
+
+if no server possible:
+    => raspberry pi desktop for the bot
+
+
+
 # ideas
 
 LBCPoster 
