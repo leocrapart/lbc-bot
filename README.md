@@ -1,5 +1,8 @@
 # next steps
 run on server
+ - test on servers to run chrome from shell
+ - find autohotkey for linux, better than clojure for start stop
+ - feedbacks on how the bot is doing (screenshots / report)
 
 navigate by inspection
 
