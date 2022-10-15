@@ -6,9 +6,9 @@ run on server
 
 navigate by inspection
 
-if no server possible:
-    => raspberry pi desktop for the bot
 
+back to autohotkey 
+=> autohotkey on server ?
 
 
 # ideas
